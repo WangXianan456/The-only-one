@@ -1,13 +1,14 @@
 const express = require('express');
 const cors = require('cors');
 const axios = require('axios');
+require('dotenv').config();
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
 // DeepSeek API配置
-const DEEPSEEK_API_KEY = 'sk-99d792ad11c548eabc24cea1438a27bb';
+const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY;
 const DEEPSEEK_API_URL = 'https://api.deepseek.com/v1/chat/completions';
 
 app.post('/api/chat', async (req, res) => {
