@@ -1,0 +1,11 @@
+{
+  "name": "ai-chat",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && node server.js",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
